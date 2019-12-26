@@ -1,0 +1,24 @@
+<tables>
+	<table>
+		<name>arealm</name>
+		<datafile>/home/bigdata/Dataset_Ignite/Dhruv_Ignite/arealm_merge_ca.csv</datafile>
+		<schema>
+			<column>
+				<name></name>
+				<type></type></column>
+			<column>
+				<name></name>
+				<type></type></column>
+			<column>
+				<name></name>
+				<type></type></column></schema></table>
+	<table>
+		<name>edges</name>
+		<datafile>/home/bigdata/Dataset_Ignite/Dhruv_Ignite/edges_merge_ca_split_dhruv.csv</datafile>
+		<schema>
+			<column>
+				<name></name>
+				<type></type></column>
+			<column>
+				<name></name>
+				<type></type></column></schema></table></tables>
