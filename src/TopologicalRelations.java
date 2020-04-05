@@ -8,7 +8,7 @@ public class TopologicalRelations {
 						+ " Area b "
 						+ "WHERE a.coords && b.coords AND ST_Equals(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 1 Area Equals Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 1 Area Equals Area:");
 	}
 	
 	/*public static void AreaEqualsArea(){
@@ -29,7 +29,7 @@ public class TopologicalRelations {
 						+ " Point b "
 						+ "WHERE a.coords && b.coords AND ST_Equals(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery2(query, "Query 2 Point Equals Point:");
+		IgniteStart_New5Apr.answerQuery2(query, "Query 2 Point Equals Point:");
 	}
 	
 	
@@ -39,10 +39,10 @@ public class TopologicalRelations {
 	public static void PointIntersectsArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.POINT_CACHE + "\".Point b "
+						+ " \"" + IgniteStart_New5Apr.POINT_CACHE + "\".Point b "
 						+ "WHERE a.coords && b.coords AND ST_Intersects(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 3 Point Intersects Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 3 Point Intersects Area:");
 	}
 
 	/*
@@ -51,10 +51,10 @@ public class TopologicalRelations {
 	public static void PointIntersectsLine(){
 		String query = 
 				"SELECT a.coords FROM Point a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Intersects(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery2(query, "Query 4 Point Intersects Line:");
+		IgniteStart_New5Apr.answerQuery2(query, "Query 4 Point Intersects Line:");
 	}
 	
 	/*
@@ -63,11 +63,11 @@ public class TopologicalRelations {
 	public static void PointIntersectsLine2(){
 		String query = 
 				"SELECT a.coords FROM"
-						+ " \"" + IgniteStart_New.POINT_CACHE + "\".Point a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.POINT_CACHE + "\".Point a,"
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Intersects(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 4 Point Intersects Line:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 4 Point Intersects Line:");
 	}
 
 	/*
@@ -76,10 +76,10 @@ public class TopologicalRelations {
 	public static void LineIntersectsArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Intersects(b.coords, a.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 5 Line Intersects Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 5 Line Intersects Area:");
 	}
 	
 	/*
@@ -88,10 +88,10 @@ public class TopologicalRelations {
 	public static void AreaTouchesAreaWater(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.WATER_AREA_CACHE + "\".WaterArea b "
+						+ " \"" + IgniteStart_New5Apr.WATER_AREA_CACHE + "\".WaterArea b "
 						+ "WHERE a.coords && b.coords AND ST_Touches(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 6 Area Touches AreaWater:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 6 Area Touches AreaWater:");
 	}
 	
 	/*
@@ -100,10 +100,10 @@ public class TopologicalRelations {
 	public static void LineTouchesArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Touches(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 7 Line Touches Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 7 Line Touches Area:");
 	}
 
 	/*
@@ -112,10 +112,10 @@ public class TopologicalRelations {
 	public static void AreaOverlapsAreaWater(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.WATER_AREA_CACHE + "\".WaterArea b "
+						+ " \"" + IgniteStart_New5Apr.WATER_AREA_CACHE + "\".WaterArea b "
 						+ "WHERE a.coords && b.coords AND ST_Overlaps(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 8 Area Overlaps AreaWater:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 8 Area Overlaps AreaWater:");
 	}
 
 	/*
@@ -124,10 +124,10 @@ public class TopologicalRelations {
 	public static void AreaContainsAreaWater(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.WATER_AREA_CACHE + "\".WaterArea b "
+						+ " \"" + IgniteStart_New5Apr.WATER_AREA_CACHE + "\".WaterArea b "
 						+ "WHERE a.coords && b.coords AND ST_Contains(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 9 Area Contains AreaWater:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 9 Area Contains AreaWater:");
 	}
 
 	/*
@@ -136,10 +136,10 @@ public class TopologicalRelations {
 	public static void AreaWithinAreaWater(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.WATER_AREA_CACHE + "\".WaterArea b "
+						+ " \"" + IgniteStart_New5Apr.WATER_AREA_CACHE + "\".WaterArea b "
 						+ "WHERE a.coords && b.coords AND ST_Within(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 10 AreaWater Within Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 10 AreaWater Within Area:");
 	}
 	
 	/*
@@ -148,10 +148,10 @@ public class TopologicalRelations {
 	public static void PointWithinArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.POINT_CACHE + "\".Point b "
+						+ " \"" + IgniteStart_New5Apr.POINT_CACHE + "\".Point b "
 						+ "WHERE a.coords && b.coords AND ST_Within(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 11 Point Within Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 11 Point Within Area:");
 	}
 	
 	/*
@@ -160,10 +160,10 @@ public class TopologicalRelations {
 	public static void LineWithinArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Within(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 12 Line Within Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 12 Line Within Area:");
 	}
 	
 	/*
@@ -172,10 +172,10 @@ public class TopologicalRelations {
 	public static void LineCrossesArea(){
 		String query = 
 				"SELECT a.coords FROM Area a,"
-						+ " \"" + IgniteStart_New.EDGE_CACHE + "\".Edge b "
+						+ " \"" + IgniteStart_New5Apr.EDGE_CACHE + "\".Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Crosses(a.coords, b.coords) = 1";
 
-		IgniteStart_New.answerQuery(query, "Query 13 Line Crosses Area:");
+		IgniteStart_New5Apr.answerQuery(query, "Query 13 Line Crosses Area:");
 	}
 	
 	/*
@@ -197,7 +197,7 @@ public class TopologicalRelations {
 						+ " Edge b "
 						+ "WHERE a.coords && b.coords AND ST_Crosses(a.coords, b.coords) = 1";
 		
-		IgniteStart_New.answerQuery3(query, "Query 14 Lines Crosses Lines:");
+		IgniteStart_New5Apr.answerQuery3(query, "Query 14 Lines Crosses Lines:");
 	}
 
 	/*

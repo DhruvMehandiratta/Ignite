@@ -133,9 +133,8 @@ public class LoadData {
 				//HashMap<String, Geometry> myCache = new HashMap<String, Geometry>();
 				//myCache.put("Area", geo);
 				Helper<String> helper = new Helper<String>(geo,AREA);
-				IgniteStart_New.dhruvAreaCache.put(areaId, helper);
-				
-				//IgniteStart_New.areaCache.put(areaId, new Area(geo));
+				IgniteStart_New5Apr.areaCache.put(areaId, new Area(geo));				
+				//IgniteStart_New5Apr.areaCache.put(areaId, new Area(geo));
 			}
 			br.close(); 	   
 		} 
@@ -170,7 +169,7 @@ public class LoadData {
 				areaId = parts[0].trim() + "." + parts[1].trim();	//partitionId.gid			
 				Geometry geo = rd.read(parts[2].trim());
 
-				IgniteStart_New.areaCache.put(areaId, new Area(geo));
+				IgniteStart_New5Apr.areaCache.put(areaId, new Area(geo));
 				//IgniteStart.areaCache.put(areaId++, new Area(geo));
 				//recordId++; //remove for gird
 			}
@@ -258,7 +257,7 @@ public class LoadData {
 				edgeId = parts[0].trim() + "." + parts[1].trim();	//partitionId.gid			
 				Geometry geo = rd.read(parts[2].trim());
 
-				IgniteStart_New.edgeCache.put(edgeId, new Edge(geo));
+				IgniteStart_New5Apr.edgeCache.put(edgeId, new Edge(geo));
 				//IgniteStart.pointCache.put(edgeId++, new Area(geo));
 				/*if(recordId > 100000L) {
 					break;
@@ -345,7 +344,7 @@ public class LoadData {
 				//pointId = parts[0].trim() + "." + parts[1].trim();	//partitionId.gid			
 				//Geometry geo = rd.read(parts[2].trim());
 
-				IgniteStart_New.pointCache.put(pointId, new Point(geo));
+				IgniteStart_New5Apr.pointCache.put(pointId, new Point(geo));
 				//IgniteStart.pointCache.put(pointId++, new Area(geo));		
 				//recordId++; //remove for grid
 			}
@@ -432,7 +431,7 @@ public class LoadData {
 				//waterAreaId = parts[0].trim() + "." + parts[1].trim();	//partitionId.gid			
 				//Geometry geo = rd.read(parts[2].trim());
 
-				IgniteStart_New.waterAreaCache.put(waterAreaId, new WaterArea(geo));
+				IgniteStart_New5Apr.waterAreaCache.put(waterAreaId, new WaterArea(geo));
 				//IgniteStart.pointCache.put(waterAreaId++, new Area(geo));
 				//recordId++; //remove for gird
 			}
